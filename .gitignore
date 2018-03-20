@@ -1,0 +1,4 @@
+.idea/*
+.vector_cache/*
+data/__pycache__/*
+nets/__pycache__/*
