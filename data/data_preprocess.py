@@ -24,8 +24,6 @@ class CustomDataset(data.Dataset):
         csv_data = pd.read_csv(path)
         print("preparing examples...")
         for i in tqdm(range(len(csv_data))):
-            if i>100 :
-                break
             sample = csv_data.loc[i]
             text, label = self.process_csv_line(sample, test)
             examples.append(data.Example.fromlist([text, label], fields))
